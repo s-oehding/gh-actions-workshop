@@ -6,12 +6,12 @@ inputs:
   message:
     description: The message that will be passed to the container
     required: true
-    default: Hi from Docker 
+    default: Hi from Docker
 
 outputs:
   time:
     description: 'The time we said hello.'
-    
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
