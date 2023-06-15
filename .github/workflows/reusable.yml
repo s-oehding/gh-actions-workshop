@@ -16,6 +16,8 @@ on:
 jobs:
   reusable-job:
     runs-on: ubuntu-latest
+    outputs:
+      current-time: ${{steps.time.outputs.time}}
     steps:
       - name: greet
         run: echo ${{inputs.message}}
