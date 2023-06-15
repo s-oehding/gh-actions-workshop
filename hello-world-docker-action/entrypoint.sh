@@ -1,5 +1,5 @@
-#! /bin/bash -l
+#!/bin/sh -l
 
-cowsay "$1"
+echo "hello $1"
 
-echo "time=$(date)" >> "$GITHUB_OUTPUT"
+echo "time=$(date)" >> $GITHUB_OUTPUT
