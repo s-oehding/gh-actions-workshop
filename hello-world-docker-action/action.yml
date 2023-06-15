@@ -8,6 +8,12 @@ inputs:
     required: true
     default: Hi from Docker 
 
+outputs:
+  time:
+    description: 'The time we said hello.'
+    
 runs:
-  using: docker
-  image: mbentley/cowsay
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
