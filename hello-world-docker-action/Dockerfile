@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM ubuntu:22.04
 
-RUN apk add cowsay
+RUN apt install cowsay
 
 COPY entrypoint.sh /entrypoint.sh
 
