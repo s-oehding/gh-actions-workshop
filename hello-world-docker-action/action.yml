@@ -1,0 +1,14 @@
+author: "@s-oehding"
+name: Whalesay Action
+description: Demo Action that accepts an input parameter message and passes it to the cowsay-docker container
+
+inputs:
+  message:
+    description: The message that will be passed to the container
+    required: true
+    default: Hi from Docker 
+
+runs:
+  using: docker
+  image: mbentley/cowsay
+
