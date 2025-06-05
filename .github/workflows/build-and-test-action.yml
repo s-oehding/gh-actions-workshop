@@ -18,6 +18,17 @@ jobs:
         uses: ./hello-world-docker-action
         with:
           message: 'Hello from Docker'
+
+      - name: Wait
+        run: |
+          secs=120
+          while [ "$secs" -gt 0 ]; do
+            echo "::notice::Countdown: $secs seconds remaining"
+            sleep 1
+            secs=$((secs-1))
+          done
+          echo "done!"
+
       
       - name: Output time set in the container
         run: echo "The time was ${{ steps.hello-world-docker-action.outputs.time }} when the action said hello"
